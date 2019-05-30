@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="labels">
+        <item>United States</item>
+        <item>United Kingdom</item>
+        <item>Australia</item>
+    </string-array>
+
+    <string-array name="values">
+        <item>us</item>
+        <item>uk</item>
+        <item>aus</item>
+    </string-array>
+</resources>
