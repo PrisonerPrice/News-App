@@ -110,7 +110,7 @@ public class QueryUtils {
         return output.toString();
     }
 
-    public static ArrayList<News> extractFeatureFromJson(String newsJSON){
+    private static ArrayList<News> extractFeatureFromJson(String newsJSON){
         // If the JSON string is empty or null, then return early
         if (TextUtils.isEmpty(newsJSON)){
             return null;
@@ -132,7 +132,7 @@ public class QueryUtils {
                 news.add(new News(title, section, date, url));
             }
         } catch (JSONException e){
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results.",e);
+            Log.e("QueryUtils", "Problem parsing the JSON results.",e);
         }
         return news;
     }
