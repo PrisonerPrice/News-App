@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class NewsLoader extends AsyncTaskLoader<ArrayList<News>> {
 
-    private String mUrl;
+    private String url;
 
     /**
      * Constructs a new {@link NewsLoader}.
@@ -22,9 +22,9 @@ public class NewsLoader extends AsyncTaskLoader<ArrayList<News>> {
      * @param context of the activity
      * @param url to load data from
      */
-    public NewsLoader(Context context, String url){
+    public NewsLoader(Context context, String mUrl){
         super(context);
-        mUrl = url;
+        url = mUrl;
     }
 
     @Override
@@ -34,11 +34,11 @@ public class NewsLoader extends AsyncTaskLoader<ArrayList<News>> {
 
     @Override
     public ArrayList<News> loadInBackground(){
-        if(mUrl == null){
+        if(url == null){
             return null;
         }
 
-        ArrayList<News> news = QueryUtils.fetchNewsDada(mUrl);
+        ArrayList<News> news = QueryUtils.fetchNewsDada(url);
         return news;
     }
 }
